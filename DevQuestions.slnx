@@ -4,6 +4,7 @@
     <File Path="src/Directory.Build.props" />
   </Folder>
   <Folder Name="/src/">
+    <Project Path="src/DevQuestions.Application/DevQuestions.Application.csproj" Id="56c94c6b-e5c0-4f7b-9123-a53695f051de" />
     <Project Path="src/DevQuestions.Contracts/DevQuestions.Contracts.csproj" Id="20ce9738-d580-4a47-81ff-b43bd3c30360" />
     <Project Path="src/DevQuestions.Domain/DevQuestions.Domain.csproj" />
     <Project Path="src/DevQuestions.Presenters/DevQuestions.Presenters.csproj" Id="4327a5f5-0ffe-430b-a6dd-3ed541146609" />
