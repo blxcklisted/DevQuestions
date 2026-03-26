@@ -1,0 +1,131 @@
+root = true
+
+# Всі C# файли
+[*.cs]
+
+########################################
+# Formatting
+########################################
+
+indent_style = tab
+indent_size = 4
+tab_width = 4
+end_of_line = crlf
+insert_final_newline = true
+
+########################################
+# Using directives
+########################################
+
+dotnet_sort_system_directives_first = true
+dotnet_separate_import_directive_groups = true
+
+########################################
+# Qualification
+########################################
+
+dotnet_style_qualification_for_field = false:suggestion
+dotnet_style_qualification_for_property = false:suggestion
+dotnet_style_qualification_for_method = false:suggestion
+dotnet_style_qualification_for_event = false:suggestion
+
+########################################
+# var preferences
+########################################
+
+csharp_style_var_for_built_in_types = true:suggestion
+csharp_style_var_when_type_is_apparent = true:suggestion
+csharp_style_var_elsewhere = false:suggestion
+
+########################################
+# Expression preferences
+########################################
+
+csharp_prefer_braces = true:warning
+csharp_style_expression_bodied_methods = false:suggestion
+csharp_style_expression_bodied_properties = true:suggestion
+csharp_style_expression_bodied_constructors = false:suggestion
+
+########################################
+# Naming rules
+########################################
+
+# Interfaces повинні починатися з I
+dotnet_naming_rule.interfaces_should_start_with_i.severity = warning
+dotnet_naming_rule.interfaces_should_start_with_i.symbols = interfaces
+dotnet_naming_rule.interfaces_should_start_with_i.style = prefix_i
+
+dotnet_naming_symbols.interfaces.applicable_kinds = interface
+dotnet_naming_symbols.interfaces.applicable_accessibilities = *
+dotnet_naming_symbols.interfaces.required_modifiers =
+
+dotnet_naming_style.prefix_i.required_prefix = I
+dotnet_naming_style.prefix_i.capitalization = pascal_case
+
+# Private fields -> _camelCase
+dotnet_naming_rule.private_fields_should_be_camel_case.severity = warning
+dotnet_naming_rule.private_fields_should_be_camel_case.symbols = private_fields
+dotnet_naming_rule.private_fields_should_be_camel_case.style = camel_case_with_underscore
+
+dotnet_naming_symbols.private_fields.applicable_kinds = field
+dotnet_naming_symbols.private_fields.applicable_accessibilities = private
+
+dotnet_naming_style.camel_case_with_underscore.required_prefix = _
+dotnet_naming_style.camel_case_with_underscore.capitalization = camel_case
+
+# Properties must be PascalCase
+dotnet_naming_rule.properties_should_be_pascal_case.severity = warning
+dotnet_naming_rule.properties_should_be_pascal_case.symbols = all_properties
+dotnet_naming_rule.properties_should_be_pascal_case.style = pascal_case_style
+
+dotnet_naming_symbols.all_properties.applicable_kinds = property
+dotnet_naming_symbols.all_properties.applicable_accessibilities = *
+dotnet_naming_symbols.all_properties.required_modifiers =
+
+dotnet_naming_style.pascal_case_style.capitalization = pascal_case
+########################################
+# StyleCop specific (SA rules)
+########################################
+
+# Documentation rules
+dotnet_diagnostic.SA1600.severity = none   # Не вимагати XML коментарі
+dotnet_diagnostic.SA1601.severity = none
+
+# Ordering
+dotnet_diagnostic.SA1200.severity = warning
+dotnet_diagnostic.SA1201.severity = warning
+
+# Readability
+dotnet_diagnostic.SA1101.severity = none   # дозволяє не писати this.
+dotnet_diagnostic.SA1124.severity = warning
+
+# Layout
+dotnet_diagnostic.SA1503.severity = warning
+dotnet_diagnostic.SA1516.severity = warning
+
+########################################
+# Code quality
+########################################
+
+dotnet_analyzer_diagnostic.severity = warning
+
+########################################
+# New line preferences
+########################################
+
+csharp_new_line_before_open_brace = all
+csharp_new_line_between_query_expression_clauses = true
+
+########################################
+# Spacing
+########################################
+
+csharp_space_after_keywords_in_control_flow_statements = true
+csharp_space_between_method_declaration_parameter_list_parentheses = false
+csharp_space_between_method_call_parameter_list_parentheses = false
+
+dotnet_diagnostic.SA1027.severity = none
+dotnet_diagnostic.IDE0055.severity = none
+dotnet_diagnostic.SA1313.severity = none
+dotnet_diagnostic.IDE0160 .severity = file_scoped	
+dotnet_diagnostic.IDE0161 .severity = file_scoped	
