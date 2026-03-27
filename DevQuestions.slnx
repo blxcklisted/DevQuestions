@@ -7,6 +7,9 @@
     <Project Path="src/DevQuestions.Application/DevQuestions.Application.csproj" Id="56c94c6b-e5c0-4f7b-9123-a53695f051de" />
     <Project Path="src/DevQuestions.Contracts/DevQuestions.Contracts.csproj" Id="20ce9738-d580-4a47-81ff-b43bd3c30360" />
     <Project Path="src/DevQuestions.Domain/DevQuestions.Domain.csproj" />
+    <Project Path="src/DevQuestions.Infrastructure.ElasticSearch/DevQuestions.Infrastructure.ElasticSearch.csproj" Id="48cd57de-55d0-4b77-a919-844c9a9efc72" />
+    <Project Path="src/DevQuestions.Infrastructure.Postgres/DevQuestions.Infrastructure.Postgres.csproj" Id="c49749ce-722c-4808-b05e-24b2ba31a4d0" />
+    <Project Path="src/DevQuestions.Infrastructure.S3/DevQuestions.Infrastructure.S3.csproj" Id="0e2f7894-3f00-4682-88e6-5d411e4b7cb2" />
     <Project Path="src/DevQuestions.Presenters/DevQuestions.Presenters.csproj" Id="4327a5f5-0ffe-430b-a6dd-3ed541146609" />
     <Project Path="src/DevQuestions.Web/DevQuestions.Web.csproj" Id="260b8810-8815-40ae-ac91-051231c17ee4" />
   </Folder>

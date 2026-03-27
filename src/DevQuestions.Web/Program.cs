@@ -1,8 +1,11 @@
 using DevQuestions.Application;
+using DevQuestions.Web;
+using DevQuestions.Web.Seeders;
 
 var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddApplication();
+builder.Services.AddProgramDependencies();
 
 var app = builder.Build();
 
@@ -13,5 +16,9 @@ if (app.Environment.IsDevelopment())
 }
 
 app.MapControllers();
+
+using var scope = app.Services.CreateScope();
+
+app.UseSeeders();
 
 app.Run();
