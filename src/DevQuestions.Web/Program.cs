@@ -1,9 +1,16 @@
+using DevQuestions.Application;
+using DevQuestions.Web;
+using DevQuestions.Web.Middlewares;
+using DevQuestions.Web.Seeders;
+
 var builder = WebApplication.CreateBuilder(args);
 
-builder.Services.AddControllers();
-builder.Services.AddOpenApi();
+builder.Services.AddApplication();
+builder.Services.AddProgramDependencies();
 
 var app = builder.Build();
+
+app.UseExceptionMiddleware();
 
 if (app.Environment.IsDevelopment())
 {
@@ -12,5 +19,9 @@ if (app.Environment.IsDevelopment())
 }
 
 app.MapControllers();
+
+using var scope = app.Services.CreateScope();
+
+app.UseSeeders();
 
 app.Run();
