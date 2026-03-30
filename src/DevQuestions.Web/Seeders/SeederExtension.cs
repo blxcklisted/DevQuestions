@@ -1,4 +1,6 @@
-﻿namespace DevQuestions.Web.Seeders;
+﻿using DevQuestions.Infrastructure.Postgres.Seeders;
+
+namespace DevQuestions.Web.Seeders;
 
 public static class SeederExtension
 {

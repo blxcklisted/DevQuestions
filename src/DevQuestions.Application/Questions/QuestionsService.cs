@@ -1,10 +1,15 @@
-﻿using DevQuestions.Contracts;
+﻿using DevQuestions.Application.Extensions;
+using DevQuestions.Application.Questions.SystemErrors;
+using DevQuestions.Application.Questions.SystemErrors.Exceptions;
+using DevQuestions.Contracts;
 using DevQuestions.Domain.Questions;
 
 using FluentValidation;
 using FluentValidation.Results;
 
 using Microsoft.Extensions.Logging;
+
+using Shared;
 
 namespace DevQuestions.Application.Questions;
 
@@ -29,13 +34,14 @@ public class QuestionsService : IQuestionsService
 		ValidationResult validationResult = await _validator.ValidateAsync(dto, cancellationToken);
 		if (!validationResult.IsValid)
 		{
-			throw new ValidationException(validationResult.Errors);
+			var errors = validationResult.ToErrors();
+			throw new QuestionValidationException(errors);
 		}
 
 		var openUserQuestionsCount = await _repository.GetOpenUserQuestionsAsync(dto.UserId, cancellationToken);
 		if (openUserQuestionsCount > 3)
 		{
-			throw new Exception("User cannot have more than 3 open questions.");
+			throw new TooManyQuestionsException();
 		}
 
 		var questionId = Guid.NewGuid();

@@ -12,5 +12,6 @@
     <Project Path="src/DevQuestions.Infrastructure.S3/DevQuestions.Infrastructure.S3.csproj" Id="0e2f7894-3f00-4682-88e6-5d411e4b7cb2" />
     <Project Path="src/DevQuestions.Presenters/DevQuestions.Presenters.csproj" Id="4327a5f5-0ffe-430b-a6dd-3ed541146609" />
     <Project Path="src/DevQuestions.Web/DevQuestions.Web.csproj" Id="260b8810-8815-40ae-ac91-051231c17ee4" />
+    <Project Path="src/Shared/Shared.csproj" Id="520e9af4-167e-4932-9a19-5f100a3f9ab1" />
   </Folder>
 </Solution>

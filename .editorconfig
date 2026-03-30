@@ -129,5 +129,10 @@ dotnet_diagnostic.IDE0055.severity = none
 dotnet_diagnostic.SA1313.severity = none
 dotnet_diagnostic.SA1200.severity = none
 dotnet_diagnostic.SA1309.severity = none
+dotnet_diagnostic.IDE0022.severity = none
+dotnet_diagnostic.IDE0305.severity = none
 dotnet_diagnostic.CA1848.severity = none
 csharp_style_namespace_declarations = file_scoped:warning
+
+# CA1707: Identifiers should not contain underscores
+dotnet_diagnostic.CA1707.severity = silent

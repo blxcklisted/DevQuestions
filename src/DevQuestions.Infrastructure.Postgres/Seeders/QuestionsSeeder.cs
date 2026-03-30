@@ -1,6 +1,4 @@
-﻿using DevQuestions.Web.Seeders;
-
-using Microsoft.EntityFrameworkCore;
+﻿using Microsoft.EntityFrameworkCore;
 
 namespace DevQuestions.Infrastructure.Postgres.Seeders;
 

@@ -53,13 +53,15 @@ public class QuestionsDapperRepository : IQuestionsRepository
 
 	public async Task<Question?> GetByIdAsync(Guid questionId, CancellationToken cancellationToken)
 	{
-		var question = await _dbContext
-			.Questions
-			.Include(x => x.Answers)
-			.Include(x => x.Solution)
-			.FirstOrDefaultAsync(x => x.Id == questionId, cancellationToken);
+		throw new NotImplementedException();
+		
+		//var question = await _dbContext
+		//	.Questions
+		//	.Include(x => x.Answers)
+		//	.Include(x => x.Solution)
+		//	.FirstOrDefaultAsync(x => x.Id == questionId, cancellationToken);
 
-		return question;
+		//return question;
 	}
 
 	public Task<int> GetOpenUserQuestionsAsync(Guid userId, CancellationToken cancellationToken)

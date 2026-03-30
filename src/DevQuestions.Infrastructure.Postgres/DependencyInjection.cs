@@ -11,8 +11,9 @@ public static class DependencyInjection
 {
 	public static IServiceCollection AddPostgresInfrastructure(this IServiceCollection services)
 	{
-		_ = services.AddSingleton<ISqlConnectionFactory, SqlConnectionFactory>();
-		_ = services.AddScoped<IQuestionsRepository, QuestionsDapperRepository>();
+		//_ = services.AddSingleton<ISqlConnectionFactory, SqlConnectionFactory>();
+		//_ = services.AddScoped<IQuestionsRepository, QuestionsDapperRepository>();
+		_ = services.AddDbContext<QuestionsDbContext>();
 		_ = services.AddScoped<IQuestionsRepository, QuestionsEfCoreRepository>();
 
 		return services;
